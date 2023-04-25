@@ -5,8 +5,7 @@
 int main(){
     int i,cant;
     char** nombres;
-    char* buff;
-    buff= (char *) malloc(200*sizeof(char));
+    char buff[100];
     printf("Ingrese la cant de nombres:\n");
     scanf("%d",&cant);
     printf("Ingresar los nombres:\n"),
@@ -14,7 +13,6 @@ int main(){
     fflush(stdin);
     for(i=0;i<cant;i++){
     	nombres[i]=(char*) malloc((strlen(buff)+1) * sizeof(char));
-    	
         printf("%d:",i+1);
         fflush(stdin);
         gets(buff);
